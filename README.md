@@ -7,11 +7,8 @@ https://andrew-liu.gitbooks.io/django-blog/content/
   https://github.com/django-admin-bootstrap/django-admin-bootstrap
 * 在my_blog/my_blog/urls.py中进行url设置的时候，作者给出的也是低版本的写法，django 1.10之后不在支持URL用字符串表示了 ，新的写法是
   ```pytthon
-  from myindex.bb import hi
-　　import myindex
-
-　　urlpatterns = [
-　　url(r'^admin/', admin.site.urls),
-　　url(r'^index', hi),
-　　]
+from article.views import home
+urlpatterns = [ 
+    url(r'^home', home),
+]
   ```
